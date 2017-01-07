@@ -1,0 +1,7 @@
+{
+    "mongoUrl": "mongodb://localhost:27017/test",
+    "flock": {
+        "appId": "APPID",
+        "appSecret": "APPSECRET"
+    }
+}
