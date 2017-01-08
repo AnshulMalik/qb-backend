@@ -7,6 +7,7 @@ var cors = require('cors');
 var http = require('http');
 
 var eventListener = require('./listener');
+var index = './api/routes/index';
 var app = express();
 
 var port = normalizePort(process.env.PORT || '3000');
@@ -28,8 +29,7 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'test.html'));
 });
 
-
-
+app.use('/api', index);
 
 server.on('listening', onListening);
 server.on('error', onError);
