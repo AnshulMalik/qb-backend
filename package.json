@@ -21,12 +21,15 @@
   "license": "MIT",
   "dependencies": {
     "body-parser": "^1.15.2",
+    "bson": "^1.0.3",
     "compression": "^1.6.2",
     "cookie-parser": "^1.4.3",
     "cors": "^2.8.1",
     "express": "^4.14.0",
-    "flockos": "0.0.4",
+    "flockos": "0.0.5",
+    "js-md4": "^0.3.0",
     "mongodb": "^2.2.19",
+    "node-ipc": "^8.10.2",
     "socket.io": "^1.7.2",
     "url": "^0.11.0"
   }
