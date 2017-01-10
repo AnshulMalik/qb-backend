@@ -6,7 +6,7 @@ var path = require('path');
 var cors = require('cors');
 var http = require('http');
 
-var eventListener = require('./listener');
+var flockService = require('./lib/services/flockService');
 var apiRoutes = require('./routes');
 var app = express();
 
@@ -23,10 +23,13 @@ app.use(compression());
 
 app.use(cors({credentials: true, origin: true}));
 
-app.use('/listener', eventListener);
+app.use('/listener', flockService.events.listener);
 
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'test.html'));
+});
+app.get('/socket.io.js', (req, res) => {
+    res.sendFile(path.join(__dirname, 'socket.io.js'));
 });
 
 app.use('/api', apiRoutes);

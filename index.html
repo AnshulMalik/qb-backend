@@ -1,0 +1,36 @@
+<head>
+    <style>
+        #app {
+            line-height: 25px;
+            letter-spacing: 20px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="app">
+
+    </div>
+    <script src="/socket.io.js"></script>
+    <script>
+
+        localStorage.debug = "socket.io-client:socket";
+        function connect(ns) {
+            return io.connect(ns, {
+                query: 'ns='+ns,
+            });
+        }
+
+        var socket = connect('/');
+        socket.on('check-install-complete', function(data) {
+            document.getElementById('app').innerText += data + '\n';
+        });
+//        socket.on('list-contacts-complete', function(data) {
+//            document.write(data);
+//            console.log('List complete ', data);
+//        });
+//        socket.emit('list-contacts', {token: '74dfcf2b-ced8-4d84-a381-14f09475ac9d'});
+        socket.emit('check-install', { userId: 'u:aooykoiy9hihmp8i' });
+    </script>
+</body>
