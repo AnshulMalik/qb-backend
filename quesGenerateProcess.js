@@ -251,7 +251,7 @@ require('./lib/api/db').then((db) => {
             for(i = 0; i < 4; i++) {
                 let s = '';
                 for(j = 0; j < this.rows; j++) {
-                    s += this.grid[j].splice(0, this.cols/4).join('') + '\n';
+                    s += this.grid[j].splice(0, this.cols/4).join('');
                 }
                 faces[i] = s;
             }

@@ -26,7 +26,7 @@ app.use(cors({credentials: true, origin: true}));
 app.use('/listener', flockService.events.listener);
 
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'test.html'));
+    res.sendFile(path.join(__dirname, 'index.html'));
 });
 app.get('/socket.io.js', (req, res) => {
     res.sendFile(path.join(__dirname, 'socket.io.js'));
