@@ -287,7 +287,7 @@ class Grid {
             obj[word.text].start = [word.start.x, word.start.y];
             // Creates hash from start coordinates and text of word
             str = word.start.x + ',' + word.start.y + ',' + word.text;
-            obj[word.text].hash = crypto.createHash('md5').update(str).digest("hex");
+            obj[word.text].hash = crypto.createHash('md4').update(str).digest("hex");
         });
 
         return obj;
