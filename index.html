@@ -3,7 +3,11 @@
 
 <body>
     <div id="app">
-
+        socket.emit('get-questions', {contestId: '5877b7007502d17514b058e6'})
+        <br /><br />
+        socket.emit('create-contest', {name: 'test', start: Date.now(), numberOfQuestions: 5, participants: ['u:aooykoiy9hihmp8i'], language: 'english'});
+        <br /><br />
+        socket.emit('list-contacts', {'eventToken': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhcHBJZCI6IjM2NzNjYjMzLTA4YWUtNGVmZS05YmI0LTI3MDQxMzliMzEwZiIsImV4cCI6MTQ4NDgxNzIyOSwidXNlcklkIjoidTp4bjJuNzczMXF6MnpmMzIyIiwiaWF0IjoxNDg0MjEyNDI5LCJqdGkiOiJjM2ZlYzg5MC02MTQ3LTQwNzctYjk4MC0xZTc0M2U0YjBiZTkifQ.j6LiFfClJvS7r56i2M2d8KtnDRDrkCfwMph5yrcrNuQ'})
     </div>
     <script src="/socket.io.js"></script>
     <script>
