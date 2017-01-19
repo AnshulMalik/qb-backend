@@ -1,0 +1,8 @@
+q = []
+a = []
+
+
+q.push('Which module is required for exception handling in node?')
+a.push('domain')
+
+q.push('
