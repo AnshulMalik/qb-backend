@@ -11,7 +11,7 @@ a.push('stdio')
 q.push('Name of the inbuilt function that catches all the errors thrown by the program')
 a.push('stderr')
 
-q.push('Which function returns a random number generator with a random value based on time?')
+q.push('Which function returns a random number generator with a random value based on time in C?')
 a.push('randomize')
 
 q.push('In which header file is the NULL macro defined? ___.h)
@@ -46,4 +46,3 @@ a.push('float', 'double')
 
 q.push('C fucntion that will you free the allocated memory ?')
 a.push('free')
-

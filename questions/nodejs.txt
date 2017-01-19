@@ -2,7 +2,7 @@ q = []
 a = []
 
 
-q.push('Which module is required for exception handling in node?')
+q.push('Which module is required for exception handling in nodejs?')
 a.push('domain')
 
 q.push('
