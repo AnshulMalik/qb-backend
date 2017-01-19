@@ -17,7 +17,7 @@
         function display(data) {
             document.getElementById('app').innerText = JSON.stringify(data) + '\n';
         }
-        var socket = io.connect('/', {query: 'eventToken=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhcHBJZCI6IjM2NzNjYjMzLTA4YWUtNGVmZS05YmI0LTI3MDQxMzliMzEwZiIsImV4cCI6MTQ4NDgxNzIyOSwidXNlcklkIjoidTp4bjJuNzczMXF6MnpmMzIyIiwiaWF0IjoxNDg0MjEyNDI5LCJqdGkiOiJjM2ZlYzg5MC02MTQ3LTQwNzctYjk4MC0xZTc0M2U0YjBiZTkifQ.j6LiFfClJvS7r56i2M2d8KtnDRDrkCfwMph5yrcrNuQ&userId=u:xn2n7731qz2zf322'});
+        var socket = io.connect('/', {query: 'eventToken=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhcHBJZCI6IjM2NzNjYjMzLTA4YWUtNGVmZS05YmI0LTI3MDQxMzliMzEwZiIsImV4cCI6MTQ4NTQyMjk5OSwidXNlcklkIjoidTphb295a29peTloaWhtcDhpIiwiaWF0IjoxNDg0ODE4MTk5LCJqdGkiOiJjNDQ4NDA2Yy05MGI3LTQ5MjAtOGQ1NC04NWNjNGQ5YzJjYWQifQ.1BMkf-hz9-ovYUiskdYJsy7QcHLAInatQumP7b4_J04&userId=u:aooykoiy9hihmp8i'});
         socket.on('join-contest-complete', display);
         socket.on('message', display);
         socket.on('get-questions-complete', display);
