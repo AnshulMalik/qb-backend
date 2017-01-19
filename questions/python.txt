@@ -1,0 +1,137 @@
+Python
+
+q = []
+a = []
+language = ['Python']
+level = 1
+
+q.push('What is the return type of function id ?')
+a.push('int')
+
+q.push('In order to store values in terms of key and value we use what core datatype.')
+a.push('dictionary')
+
+q.push('What is the return value of trunc() ?')
+a.push('int')
+
+q.push('What is the type of sys.argv?')
+a.push('list')
+
+q.push('Which module in the python standard library parses options received from the command line?')
+a.push('getopt')
+
+q.push('Which keyword is use for function?')
+a.push('Def')
+
+q.push('Which keyword does the same work as return keyword?')
+a.push('Yeild')
+
+q.push('What is a coding convention, a set of recommendation, about how to write your Python code more readable?')
+a.push('PEP8')
+
+q.push('What is the name of the python module that accepts a python object and converts it into a string representation and dumps it into a file by using dump function?')
+a.push('Pickle')
+
+q.push('What are the tools that help to find bugs or perform static analysis?')
+a.push('Pychecker')
+
+q.push('What are the specific changes that we make in Python syntax to alter functions easily called?')
+a.push('decorators')
+
+q.push('Mutable datatype in python?')
+a.push('list')
+
+q.push('Non-mutable datatype in python?')
+a.push('tuple')
+
+q.push('What is the comprehension that is used to ease the creation of Dictionary based on existing iterable ?')
+a.push('Dict')
+
+
+q.push('What is the comprehension that is used to ease the creation of List based on existing iterable?')
+a.push('List')
+
+q.push('What is the single expression anonymous function often used as inline function?')
+a.push('lambda')
+
+q.push('Which form in python does not have statements as it is used to make new function object and then return them at runtime?')
+a.push('lambda')
+
+q.push('What is the no-operation statement in python?')
+a.push('pass')
+
+q.push('What is the name of the unit testing framework in Python?')
+a.push('unittest')
+
+q.push('What is the mechanism/function which helps to select a range of items from sequence types like list, tuple, strings etc.?')
+a.push('slicing')
+
+q.push('The way of implementing iterators are called as _____?')
+a.push('generators')
+
+q.push('Python documentation string is known as _______?')
+a.push('docstring')
+
+q.push('________ is the way to structure a program in python?')
+a.push('module')
+
+q.push('The folder of Python program is a package of modules.  A __________ can have modules or subfolders.')
+a.push('package')
+
+q.push('What happens on using `os.remove (filename)` command to the file?')
+a.push('delete')
+
+q.push('What is the maximum value that the random function can generate?(round it off to an integer :P)')
+a.push('1')
+
+q.push('What is the name of the module in python that contains the random function?')
+a.push('random')
+
+q.push('__________ is a web micro framework for Python based on “Werkzeug, Jinja 2 and good intentions” BSD licensed.')
+a.push('Flask')
+
+q.push('___________ and __________ are the dependencies if flask.')
+a.push('jingja', 'Werkzeug ')
+
+q.push('Flask allows to request database in three ways. Which function is called before the request?')
+a.push('before_request')
+
+q.push('Flask allows to request database in three ways. Which function is called after a request?')
+a.push('after_request')
+
+q.push('Flask allows to request database in three ways. Which function is called when exception is raised, and response are not guaranteed?')
+a.push('teardown_request')
+
+q.push('What is the name of the effect which is referred to the event when cache expires, and websites are hit by the multiple requests made by the client at the same time?')
+a.push('Dogpile')
+
+q.push('Which type of locks are used to prevent Dogpile effect?')
+a.push('semaphore')
+
+q.push('_________ is commonly misused to use it as a data store, and not as a cache')
+a.push('Memcached')
+
+q.push('')
+a.push('')
+
+q.push('')
+a.push('')
+
+q.push('')
+a.push('')
+
+q.push('')
+a.push('')
+
+q.push('')
+a.push('')
+
+q.push('')
+a.push('')
+
+q.push('')
+a.push('')
+
+
+for i in range(0,len(q)):
+	{'Question': q[i], 'Answer': a[i]}
