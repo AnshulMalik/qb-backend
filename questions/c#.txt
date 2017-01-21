@@ -2,60 +2,60 @@ q = []
 a = []
 
 #.net framework
-q.push('Which utility can be used to compile managed assemblies into processor-specific native code?')
-a.push('ngen')
+q.append('Which utility can be used to compile managed assemblies into processor-specific native code?')
+a.append('ngen')
 
-q.push('Which of the following .NET components can be used to remove unused references from the managed heap?(suppress the space)')
-a.push('GarbageCollector')
+q.append('Which of the following .NET components can be used to remove unused references from the managed heap?(suppress the space)')
+a.append('GarbageCollector')
 
-q.push('Which type of assembly can be stored in Global Assembly Cache?')
-a.push('Shared')
+q.append('Which type of assembly can be stored in Global Assembly Cache?')
+a.append('Shared')
 
-q.push('Which type of code that targets the Common Language Runtime?')
-a.push('Managed')
+q.append('Which type of code that targets the Common Language Runtime?')
+a.append('Managed')
 
 #functions and subroutines
-q.push('Name anything that CANNOT occur multiple number of times in a program?')
-a.push('Entrypoint')
+q.append('Name anything that CANNOT occur multiple number of times in a program?')
+a.append('Entrypoint')
 
-q.push('int[ , , ] a = new int[ 3, 2, 3 ]; Console.WriteLine(a.Length); (Answer in english)')
-a.push('Ten')
+q.append('int[ , , ] a = new int[ 3, 2, 3 ]; Console.WriteLine(a.Length); (Answer in english)')
+a.append('Ten')
 
 #exception handling
-q.push('Which is type of exception is not present in .NET?')
-a.push('StackMemoryException')
+q.append('Which is type of exception is not present in .NET?')
+a.append('StackMemoryException')
 
-q.push('In C#.NET if we do not catch the exception thrown at runtime then which of the following will catch it?')
-a.push('clr')
+q.append('In C#.NET if we do not catch the exception thrown at runtime then which of the following will catch it?')
+a.append('clr')
 
 #delegates
-q.push('Who serves the same purpose as function pointers in C and pointers to member function operators in C++?')
-a.push('delegates')
+q.append('Who serves the same purpose as function pointers in C and pointers to member function operators in C++?')
+a.append('delegates')
 
-q.push('Which declaration is the necessary condition for implementing delegates?')
-a.push('Class')
+q.append('Which declaration is the necessary condition for implementing delegates?')
+a.append('Class')
 
-q.push('Which can be used to implement callback notification?')
-a.push('delegates')
+q.append('Which can be used to implement callback notification?')
+a.append('delegates')
 
-q.push('Who permits execution of a method on a secondary thread in an asynchronous manner. ')
-a.push('delegates')
+q.append('Who permits execution of a method on a secondary thread in an asynchronous manner. ')
+a.append('delegates')
 
-q.push('Which cannot be used to call procedures that receive variable number of arguments.')
-a.push('delegates')
+q.append('Which cannot be used to call procedures that receive variable number of arguments.')
+a.append('delegates')
 
-q.push('')
-a.push('')
+q.append('')
+a.append('')
 
-q.push('')
-a.push('')
+q.append('')
+a.append('')
 
-q.push('')
-a.push('')
+q.append('')
+a.append('')
 
-q.push('')
-a.push('')
+q.append('')
+a.append('')
 
-q.push('')
-a.push('')
+q.append('')
+a.append('')
 

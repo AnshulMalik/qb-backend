@@ -1,49 +1,49 @@
 q = []
 a = []
 
-q.push('When we mention the prototype of a function?')
-a.push('Declaring')
+q.append('When we mention the prototype of a function?')
+a.append('Declaring')
 
 #library functions
-q.push('Input/output function prototypes and macros are defined in which header file? ____.h')
-a.push('stdio')
+q.append('Input/output function prototypes and macros are defined in which header file? ____.h')
+a.append('stdio')
 
-q.push('Name of the inbuilt function that catches all the errors thrown by the program')
-a.push('stderr')
+q.append('Name of the inbuilt function that catches all the errors thrown by the program')
+a.append('stderr')
 
-q.push('Which function returns a random number generator with a random value based on time?')
-a.push('randomize')
+q.append('Which function returns a random number generator with a random value based on time?')
+a.append('randomize')
 
-q.push('In which header file is the NULL macro defined? ___.h)
-a.push('locale', 'stddef', 'stdio', 'stdlib', 'string', 'time', 'wchar')
+q.append('In which header file is the NULL macro defined? ___.h)
+a.append('locale', 'stddef', 'stdio', 'stdlib', 'string', 'time', 'wchar')
 
 #strings
-q.push('Which function sets first n characters of a string to a given character?')
-a.push('strnset')
+q.append('Which function sets first n characters of a string to a given character?')
+a.append('strnset')
 
-q.push('The library function used to find the last occurrence of a character in a string is ___________ ')
-a.push('strrchr')
+q.append('The library function used to find the last occurrence of a character in a string is ___________ ')
+a.append('strrchr')
 
-q.push('Which function is used to find the first occurrence of a given string in another string?')
-a.push('strstr')
+q.append('Which function is used to find the first occurrence of a given string in another string?')
+a.append('strstr')
 
-q.push('Which function is more appropriate for reading in a multi-word string?')
-a.push('gets')
+q.append('Which function is more appropriate for reading in a multi-word string?')
+a.append('gets')
 
 #memory allocation
-q.push('Which header file should be included to use functions like malloc() and calloc()?')
-a.push('stdlib')
+q.append('Which header file should be included to use functions like malloc() and calloc()?')
+a.append('stdlib')
 
-q.push('What function should be used to free the memory allocated by calloc() ?')
-a.push('free')
+q.append('What function should be used to free the memory allocated by calloc() ?')
+a.append('free')
 
-q.push('Which library functions to dynamically allocate memory?')
-a.push('malloc', 'calloc')
+q.append('Which library functions to dynamically allocate memory?')
+a.append('malloc', 'calloc')
 
 #general
-q.push('One of the datatype that cannot be checked in a switch-case statement?')
-a.push('float', 'double')
+q.append('One of the datatype that cannot be checked in a switch-case statement?')
+a.append('float', 'double')
 
-q.push('C fucntion that will you free the allocated memory ?')
-a.push('free')
+q.append('C fucntion that will you free the allocated memory ?')
+a.append('free')
 
