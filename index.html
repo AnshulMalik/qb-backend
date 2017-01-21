@@ -5,7 +5,7 @@
     <div id="app">
         u:xn2n7731qz2zf322
         <br />
-        socket.emit('get-questions', {contestId: '5880963d6881b42825639d22'})
+        socket.emit('get-questions', {contestId: '5883182fa263df4a9399ccc3'})
         <br /><br />
         socket.emit('create-contest', {name: 'test', start: Date.now(), numberOfQuestions: 5, participants: ['u:aooykoiy9hihmp8i'], language: 'english'});
         <br /><br />
@@ -19,14 +19,14 @@
         function display(data) {
             document.getElementById('app').innerText = JSON.stringify(data) + '\n';
         }
-//        var socket = io.connect('/', {query: 'userId=u:aooykoiy9hihmp8i'});
-//        socket.on('join-contest-complete', display);
-//        socket.on('message', display);
-//        socket.on('get-questions-complete', display);
-//        socket.on('err', display);
-//        socket.on('list-contacts-complete', display);
-//        socket.on('install-required', display);
-//        socket.on('list-live-complete', display);
-//        socket.emit('join-contest', { id: 1 });
+        var socket = io.connect('/', {query: 'userId=u:aooykoiy9hihmp8i'});
+        socket.on('join-contest-complete', display);
+        socket.on('message', display);
+        socket.on('get-questions-complete', display);
+        socket.on('err', display);
+        socket.on('list-contacts-complete', display);
+        socket.on('install-required', display);
+        socket.on('list-live-complete', display);
+        socket.on('list-languages-complete', display);
     </script>
 </body>

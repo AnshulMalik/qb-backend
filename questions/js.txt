@@ -1,8 +1,5 @@
-Python
-
 q = []
 a = []
-language = ['Javascript']
 
 q.push('Inside which HTML element do we put the JavaScript? <%s>')
 a.push('script')
@@ -24,71 +21,6 @@ a.push('Unobtrusive')
 
 q.push('What is used to represent not-a-number?')
 a.push('Nan')
-
-q.push('')
-a.push('')
-
-q.push('')
-a.push('')
-
-q.push('')
-a.push('')
-
-q.push('')
-a.push('')
-
-q.push('')
-a.push('')
-
-q.push('')
-a.push('')
-
-q.push('')
-a.push('')
-
-q.push('')
-a.push('')
-
-q.push('')
-a.push('')
-
-q.push('')
-a.push('')
-
-q.push('')
-a.push('')
-
-q.push('')
-a.push('')
-
-q.push('')
-a.push('')
-
-q.push('')
-a.push('')
-
-q.push('')
-a.push('')
-
-q.push('')
-a.push('')
-
-q.push('')
-a.push('')
-
-q.push('')
-a.push('')
-
-q.push('')
-a.push('')
-
-q.push('')
-a.push('')
-
-q.push('')
-a.push('')
-
-
 
 for i in range(0,len(q)):
 	{'Question': q[i], 'Answer': a[i]}

@@ -43,19 +43,3 @@ a.push('delegates')
 
 q.push('Which cannot be used to call procedures that receive variable number of arguments.')
 a.push('delegates')
-
-q.push('')
-a.push('')
-
-q.push('')
-a.push('')
-
-q.push('')
-a.push('')
-
-q.push('')
-a.push('')
-
-q.push('')
-a.push('')
-

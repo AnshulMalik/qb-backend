@@ -1,0 +1,37 @@
+{"question": "Which type of class allows only one object of it to be created?", "answers": ["Singleton"]}
+{"question": "How many instances of an abstract class can be created?(in english)", "answers": ["zero"]}
+{"question": "Which concept provides facility of using object of one class inside another class?", "answers": ["Composition"]}
+{"question": "How many types of polymorphisms are supported by C++?(in english)", "answers": ["two"]}
+{"question": "Example of an abstract data type escpecially used in C++", "answers": ["Class"]}
+{"question": "Which type of polymorphism correctly describes overloading of functions?", "answers": ["Ad-hoc", "Adhoc"]}
+{"question": "Which concept means wrapping up of data and functions together?", "answers": ["Encapsulation"]}
+{"question": "Which type of tables/functions are used in implementing late binding in C++?", "answers": ["Virtual"]}
+{"question": "Which is the class of the object cout?", "answers": ["ostream"]}
+{"question": "Name the keyword that cannot be used with constructor in C++.", "answers": ["virtual"]}
+{"question": "Which property in C++ enables the compiler to check the type of reference in the object and not the type of object.", "answers": ["Polymorphism"]}
+{"question": "Which type of data members are available only in the class hierarchy chain?", "answers": ["Protected"]}
+{"question": "Which header file includes definition of cin and cout? ____.h", "answers": ["iostream"]}
+{"question": "Which keyword is used to overload an operator?", "answers": ["operator"]}
+{"question": "Name an invalid visibility label while inheriting a class?", "answers": ["friend"]}
+{"question": "Name the access specifier is used as a default in a class definition?", "answers": ["private"]}
+{"question": "Which property provides a reuse mechanism in C++?", "answers": ["Inheritance"]}
+{"question": "Synonym for reference is _________", "answers": ["Pointer"]}
+{"question": "Number of parameters is called the default constructor.(in english)", "answers": ["zero"]}
+{"question": "At which time an error is thrown if a class with parameterized constructors and having no default constructor is used in a program and we create an object that needs a zero-argument constructor?", "answers": ["compile"]}
+{"question": "Can a class have virtual destructor?", "answers": ["Yes"]}
+{"question": "Name the constructor function is designed to copy objects of the same class type?", "answers": ["Copy"]}
+{"question": "Copy constructor must receive its arguments by pass-by-______", "answers": ["reference"]}
+{"question": "What is a function with the same name as the class, but preceded with a tilde character?", "answers": ["destructor"]}
+{"question": "Which gets called when an object goes out of scope?", "answers": ["destructor"]}
+{"question": "Which constrctor is used to make a copy of one class object from another class object of the same class type.", "answers": ["copy"]}
+{"question": "Which type of function cannot be declared as virtual?", "answers": ["Constructor"]}
+{"question": "One type of function which is NOT provided by the compiler by default?(suppress the space in answer if existing)", "answers": ["copydestructor"]}
+{"question": "Which type of error occurs if we pass arguments to a destructor?", "answers": ["syntax"]}
+{"question": "If the programmer does not explicitly provide a destructor, then who creates an empty destructor?", "answers": ["Compiler"]}
+{"question": "Number of default constructors per class?(in english)", "answers": ["one"]}
+{"question": "Numebr of arguments in a destructor. (in english)", "answers": ["zero"]}
+{"question": "Which gets called when an object is being created?", "answers": ["constructor"]}
+{"question": "To ensure that every object in the array receives a destructor call, always delete memory allocated as an array using ______ operator.", "answers": ["delete"]}
+{"question": "Which type of functions cannot be overloaded?", "answers": ["virtual"]}
+{"question": "Which keyword is used to control access to a class member?", "answers": ["protected"]}
+{"question": "Which type of data member can be shared by all instances of its class?", "answers": ["static"]}
