@@ -3,11 +3,13 @@
 
 <body>
     <div id="app">
-        socket.emit('get-questions', {contestId: '5877b7007502d17514b058e6'})
+        u:xn2n7731qz2zf322
+        <br />
+        socket.emit('get-questions', {contestId: '5883182fa263df4a9399ccc3'})
         <br /><br />
         socket.emit('create-contest', {name: 'test', start: Date.now(), numberOfQuestions: 5, participants: ['u:aooykoiy9hihmp8i'], language: 'english'});
         <br /><br />
-        socket.emit('list-contacts', {'eventToken': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhcHBJZCI6IjM2NzNjYjMzLTA4YWUtNGVmZS05YmI0LTI3MDQxMzliMzEwZiIsImV4cCI6MTQ4NDgxNzIyOSwidXNlcklkIjoidTp4bjJuNzczMXF6MnpmMzIyIiwiaWF0IjoxNDg0MjEyNDI5LCJqdGkiOiJjM2ZlYzg5MC02MTQ3LTQwNzctYjk4MC0xZTc0M2U0YjBiZTkifQ.j6LiFfClJvS7r56i2M2d8KtnDRDrkCfwMph5yrcrNuQ'})
+        socket.emit('list-contacts', {'eventToken': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhcHBJZCI6IjA3MjYwOWRjLWExMDQtNDhkNy05YjY2LWFlOWI5ZTdlOTUzOSIsImV4cCI6MTQ4NTcwNDkzNCwidXNlcklkIjoidTphb295a29peTloaWhtcDhpIiwiaWF0IjoxNDg1MTAwMTM0LCJqdGkiOiIxYTlmYjFjYy04MTJhLTRlMmEtYmZiZS1lMjA1ODMzMjJjM2UifQ.uYLvOiCiPPPvgq4umr9g5WHRWQMd6Oq0uk2xcvmG1y8&'})
     </div>
     <script src="/socket.io.js"></script>
     <script>
@@ -17,13 +19,15 @@
         function display(data) {
             document.getElementById('app').innerText = JSON.stringify(data) + '\n';
         }
-        var socket = io.connect('/', {query: 'eventToken=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhcHBJZCI6IjM2NzNjYjMzLTA4YWUtNGVmZS05YmI0LTI3MDQxMzliMzEwZiIsImV4cCI6MTQ4NDgxNzIyOSwidXNlcklkIjoidTp4bjJuNzczMXF6MnpmMzIyIiwiaWF0IjoxNDg0MjEyNDI5LCJqdGkiOiJjM2ZlYzg5MC02MTQ3LTQwNzctYjk4MC0xZTc0M2U0YjBiZTkifQ.j6LiFfClJvS7r56i2M2d8KtnDRDrkCfwMph5yrcrNuQ&userId=u:xn2n7731qz2zf322'});
+        var socket = io.connect('/', {query: 'eventToken=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhcHBJZCI6IjA3MjYwOWRjLWExMDQtNDhkNy05YjY2LWFlOWI5ZTdlOTUzOSIsImV4cCI6MTQ4NTcwNDkzNCwidXNlcklkIjoidTphb295a29peTloaWhtcDhpIiwiaWF0IjoxNDg1MTAwMTM0LCJqdGkiOiIxYTlmYjFjYy04MTJhLTRlMmEtYmZiZS1lMjA1ODMzMjJjM2UifQ.uYLvOiCiPPPvgq4umr9g5WHRWQMd6Oq0uk2xcvmG1y8&userId=u:aooykoiy9hihmp8i'});
         socket.on('join-contest-complete', display);
         socket.on('message', display);
         socket.on('get-questions-complete', display);
         socket.on('err', display);
         socket.on('list-contacts-complete', display);
         socket.on('install-required', display);
-//        socket.emit('join-contest', { id: 1 });
+        socket.on('list-live-complete', display);
+        socket.on('list-languages-complete', display);
+        socket.on('get-leaderboard-complete', display);
     </script>
 </body>

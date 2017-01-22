@@ -1,0 +1,126 @@
+q = []
+a = []
+
+q.append('Which type of class allows only one object of it to be created?')
+a.append('Singleton')
+
+q.append('How many instances of an abstract class can be created?(in english)')
+a.append('zero')
+
+q.append('Which concept provides facility of using object of one class inside another class?')
+a.append('Composition')
+
+q.append('How many types of polymorphisms are supported by C++?(in english)')
+a.append('two')
+
+q.append('Example of an abstract data type escpecially used in C++')
+a.append('Class')
+
+q.append('Which type of polymorphism correctly describes overloading of functions?')
+a.append(['Ad-hoc', 'Adhoc'])
+
+q.append('Which concept means wrapping up of data and functions together?')
+a.append('Encapsulation')
+
+q.append('Which type of tables/functions are used in implementing "late binding" in C++?')
+a.append('Virtual')
+
+q.append('Which is the class of the object cout?')
+a.append('ostream')
+
+q.append('Name the keyword that cannot be used with constructor in C++.')
+a.append('virtual')
+
+q.append('Which property in C++ enables the compiler to check the type of reference in the object and not the type of object.')
+a.append('Polymorphism')
+
+q.append('Which type of data members are available only in the class hierarchy chain?')
+a.append('Protected')
+
+q.append('Which header file includes definition of cin and cout? ____.h')
+a.append('iostream')
+
+q.append('Which keyword is used to overload an operator?')
+a.append('operator')
+
+q.append('Name an invalid visibility label while inheriting a class?')
+a.append('friend')
+
+q.append('Name the access specifier is used as a default in a class definition?')
+a.append('private')
+
+q.append('Which property provides a reuse mechanism in C++?')
+a.append('Inheritance')
+
+#references
+q.append('Synonym for reference is _________')
+a.append('Pointer')
+
+#constructors and destructors
+q.append('Number of parameters is called the default constructor.(in english)')
+a.append('zero')
+
+q.append('At which time an error is thrown if a class with parameterized constructors and having no default constructor is used in a program and we create an object that needs a zero-argument constructor?')
+a.append('compile')
+
+q.append('Can a class have virtual destructor?')
+a.append('Yes')
+
+q.append('Name the constructor function is designed to copy objects of the same class type?')
+a.append('Copy')
+
+q.append('Copy constructor must receive its arguments by pass-by-______')
+a.append('reference')
+
+q.append('What is a function with the same name as the class, but preceded with a tilde character?')
+a.append('destructor')
+
+q.append('Which gets called when an object goes out of scope?')
+a.append('destructor')
+
+q.append('Which constrctor is used to make a copy of one class object from another class object of the same class type.')
+a.append('copy')
+
+q.append('Which type of function cannot be declared as virtual?')
+a.append('Constructor')
+
+q.append('One type of function which is NOT provided by the compiler by default?(suppress the space in answer if existing)')
+a.append('copydestructor')
+
+q.append('Which type of error occurs if we pass arguments to a destructor?')
+a.append('syntax')
+
+q.append('If the programmer does not explicitly provide a destructor, then who creates an empty destructor?')
+a.append('Compiler')
+
+q.append('Number of default constructors per class?(in english)')
+a.append('one')
+
+q.append('Numebr of arguments in a destructor. (in english)')
+a.append('zero')
+
+q.append('Which gets called when an object is being created?')
+a.append('constructor')
+
+q.append('To ensure that every object in the array receives a destructor call, always delete memory allocated as an array using ______ operator.')
+a.append('delete')
+
+q.append('Which type of functions cannot be overloaded?')
+a.append('virtual')
+
+q.append('Which keyword is used to control access to a class member?')
+a.append('protected')
+
+q.append('Which type of data member can be shared by all instances of its class?')
+a.append('static')
+
+
+f = open('c++','w')
+
+for i in range(0,len(q)):
+    if(type(a[i]) == type('asdf')):
+        a[i] = [a[i]];
+#    print(q[i])
+#    print(a[i])
+    f.write(str({'question': q[i], 'answers': a[i]}))
+    f.write('\n')
