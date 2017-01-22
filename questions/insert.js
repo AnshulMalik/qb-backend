@@ -1,13 +1,13 @@
-const fs = require('fs');
-const values = fs.readFileSync('./c++', 'utf8').split('\n');
-require('../lib/api/db').then((db) => {
+var fs = require('fs');
+var values = fs.readFileSync('./python', 'utf8').split('\n');
+require('../lib/api/db').then(function(db) {
 
-    for(let value of values) {
+    for(var value of values) {
         if(value) {
-            let row = JSON.parse(value);
+            var row = JSON.parse(value);
             db.collection('questions').insertOne({
                 description: row.question,
-                language: 'c++',
+                language: 'python',
                 level: 1,
                 solutions: row.answers.map((txt) => { return {answer: txt, points: 5};})
             });
