@@ -1,0 +1,37 @@
+{
+  "name": "qb-backend",
+  "version": "0.0.1",
+  "description": "QB backend implementation",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com:AnshulMalik/qb-backend.git"
+  },
+  "bugs": {
+    "url": "https://github.com/AnshulMalik/qb-backend/issues"
+  },
+  "homepage": {
+    "url": "https://github.com/AnshulMalik/qb-backend#readme"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "compression": "^1.6.2",
+    "cookie-parser": "^1.4.3",
+    "cors": "^2.8.1",
+    "express": "^4.14.0",
+    "flockos": "0.0.5",
+    "js-md4": "^0.3.0",
+    "mongodb": "^2.2.19",
+    "node-ipc": "^8.10.2",
+    "nodemailer": "^0.7.1",
+    "sendgrid": "^4.7.1",
+    "socket.io": "^1.7.2",
+    "url": "^0.11.0"
+  }
+}

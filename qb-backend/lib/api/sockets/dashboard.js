@@ -5,7 +5,6 @@ const questionService = require('../../services/questionService');
 const leaderboardService = require('../../services/leaderboardService');
 const constants = require('../constants/socket');
 const env = process.env.NODE_ENV || 'development';
-const ObjectId = require('mongodb').ObjectID;
 const statusCodes = require('../../statusCodes');
 const Response = require('../../response');
 
@@ -32,8 +31,7 @@ module.exports = {
         }
 
         userService.getProfile(socket.userId).then((user) => {
-            let userContests = user.contests.toString().split(',');
-            if(userContests.indexOf(params.contestId) !== -1) {
+            if(user.contests.indexOf(params.contestId) != -1) {
                 r.status = statusCodes.SUCCESS;
                 r.data = 'Joined';
                 socket.join(params.contestId);
@@ -310,20 +308,20 @@ module.exports = {
                     // Text is not in answer, search in bonus answers
                     let bonuses = Object.keys(words);
                     console.log(bonuses, answer[2]);
-                    if(bonuses.indexOf(answer[2]) !== -1) {
+                    if(bonuses.indexOf(answer[2] !== -1)) {
                         // Bonus is solved, verify coordinates
                         let coord = words[answer[2]].start;
                         console.log('checking bonus', coord, answer);
                         if(coord[0] == answer[0] && coord[1] == answer[1]) {
-                            contestService.markSolved(userId, contestId, questionId, 5, answer[2], 'bonus').then((newScore) => {
+                            contestService.markSolved(userId, contestId, questionId, points, answer[2], 'bonus').then((newScore) => {
                                 if(newScore) {
                                     // Bonus is not already solved
                                     r.status = statusCodes.SUCCESS;
                                     r.data = { type: 'bonus', userId, newScore };
+                                    io.of(contestId).emit(constants.emit.leaderboardUpdated, r);
                                     // Sent to all
                                     console.log('emitting solved bonus');
                                     socket.emit(constants.emit.submitAnswer, r);
-                                    io.of(contestId).emit(constants.emit.leaderboardUpdated, r);
                                 }
                                 else {
                                     // Bonus was already solved, so no points given
