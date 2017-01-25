@@ -5,6 +5,7 @@ var words = ['tammana', 'durga', 'venkata', 'rewanth'];
 var counterArray = [];
 var checkSet;
 var MAX_SIZE = 5;
+var data;
 
 var getRandom = () => {
 	return String.fromCharCode(Math.floor(Math.random() * 26) + 65);
@@ -29,7 +30,7 @@ var check = (pos, next) => {
 
 	let size = MAX_SIZE*4;
 	let newPosition;
-	console.log(pos, next);
+	//console.log(pos, next);
 
 	checkSet.add(next);
 
@@ -44,8 +45,8 @@ var check = (pos, next) => {
 			}
 		}
 
-		console.log(pos, next, document.getElementById(newPosition).innerHTML);
-		if(document.getElementById(newPosition).innerHTML != "#") {
+		//console.log(pos, next, data[newPosition]);
+		if(data[newPosition] != "#") {
 			if(Array.from(checkSet).length == 4) {
 				return run();
 			}
@@ -62,20 +63,20 @@ var check = (pos, next) => {
 		// and changing its position
 		if(pos > 0 && pos < size) {
 			newPosition = pos + size;
-			if(document.getElementById(newPosition) != '#') {
+			if(data[newPosition] != '#') {
 				newPosition = pos - 1;
-				if(document.getElementById(newPosition) != '#') {
+				if(data[newPosition] != '#') {
 					newPosition = pos + 1;
-					if(document.getElementById(newPosition) != '#') {
+					if(data[newPosition] != '#') {
 						newPosition = 10000;
 					}
 				}
 			}
 		}
 
-		console.log(pos, next, document.getElementById(newPosition).innerHTML);
+		//console.log(pos, next, data[newPosition]);
 
-		if(document.getElementById(newPosition).innerHTML != "#") {
+		if(data[newPosition] != "#") {
 			if(Array.from(checkSet).length == 4) {
 				return run();
 			}
@@ -97,17 +98,17 @@ var check = (pos, next) => {
 
 		if(pos == 0) {
 			newPosition = pos + size - 1;
-			if(document.getElementById(newPosition) != '#') {
+			if(data[newPosition] != '#') {
 				newPosition = pos + size;
-				if(document.getElementById(newPosition) != '#') {
+				if(data[newPosition] != '#') {
 					newPosition = 10000;
 				}
 			}
 		}
 		
-		console.log(pos, next, document.getElementById(newPosition).innerHTML);
+		//console.log(pos, next, data[newPosition]);
 		
-		if(document.getElementById(newPosition).innerHTML != "#") {
+		if(data[newPosition] != "#") {
 			if(Array.from(checkSet).length == 4) {
 				return run();
 			}
@@ -124,19 +125,19 @@ var check = (pos, next) => {
 		// and changing its position
 		if(newPosition >= count) {
 			newPosition = pos - size;
-			if(document.getElementById(newPosition) != '#') {
+			if(data[newPosition] != '#') {
 				newPosition = pos - 1;
-				if(document.getElementById(newPosition) != '#') {
+				if(data[newPosition] != '#') {
 					newPosition = pos + 1;
-					if(document.getElementById(newPosition) != '#') {
+					if(data[newPosition] != '#') {
 						newPosition = 10000;
 					}
 				}
 			}
 		}
-		console.log(pos, next, document.getElementById(newPosition).innerHTML);
+		//console.log(pos, next, data[newPosition]);
 		
-		if(document.getElementById(newPosition).innerHTML != "#") {
+		if(data[newPosition] != "#") {
 			if(Array.from(checkSet).length == 4) {
 				return run();
 			}
@@ -150,26 +151,15 @@ var check = (pos, next) => {
 
 var box = (size) => {
 	
-	let table = "";
 	
 	let row = size*4;
 	let col = size;
-	count = 0;
+	count = row*col;
 
-    for(let i = 0; i < col; i++) {
-        table += '<tr>'
-        for(let j = 0; j < row; j++) {
-        	
-	        table += '<td id="' + count  + '" ></td>';
-	        count += 1;
-        }
-        table += '</tr>';        
-    }
-    console.log(table);
-    document.getElementById('top').innerHTML = table;
+	data = [];
 
     for(let i = 0; i < count; i++) {
-    	document.getElementById(i).innerHTML = '#';
+    	data.push('#');
     }
 
 }
@@ -177,7 +167,7 @@ var box = (size) => {
 var putName = (name) => {
 	
 	let pos = getRandomPosition(count);
-	console.log(pos,count);
+	//console.log(pos,count);
 	let newPosition = pos;
 	positions = []
 
@@ -187,11 +177,11 @@ var putName = (name) => {
 			checkSet = new Set();
 			newPosition = check(pos, getRandomDirection());
 			pos = newPosition;
-			document.getElementById(newPosition).innerHTML = name[i];
+			data[newPosition] = name[i];
 			positions.push(newPosition);
 		}
 		catch(err) {
-			console.log(err);
+			//console.log(err);
 			return 0;
 		}
 	
@@ -208,7 +198,7 @@ var numberOfFacesCovered = () => {
 
 	// Since this will be folded this isn't a violation
 	if(maxFace == 4 && maxFace == 1) {
-		return 1;
+			return 1;
 	}
 
 	return range;
@@ -244,7 +234,7 @@ var putName1 = (functionId) => {
 
 	if(res == 0 || range > 1) {
 		for(let i = 0; i < positions.length; i++) {
-			document.getElementById(positions[i]).innerHTML = '#';
+			data[positions[i]].innerHTML = '#';
 		}
 
 		if(counterArray[functionId] >= 5) {
@@ -253,7 +243,7 @@ var putName1 = (functionId) => {
 			}
 			else {
 				for(let i = 0; i < positionsOfAllWords[functionId].length; i++) {
-					document.getElementById(positionsOfAllWords[functionId][i]).innerHTML = '#';
+					data[positionsOfAllWords[functionId][i]].innerHTML = '#';
 				}
 				counterArray[functionId] = 0;
 				return putName1(functionId - 1);
@@ -268,13 +258,22 @@ var putName1 = (functionId) => {
 }
 
 run();
+let t = 0;
+for(let i = 0; i < MAX_SIZE; i++) {
+	let str = "";
+	for(let j = 0; j < MAX_SIZE*4; j++) {
+		str += data[t] + ' ';
+		t+=1;
+	}
+	//console.log(str);
+}
 
 let temp = 0;
 let grid = [];
 for(let i = 0; i < MAX_SIZE; i++) {
 	grid.push([]);
 	for(let j = 0; j < MAX_SIZE*4; j++) {
-		grid[i].push(document.getElementById(temp).innerHTML);
+		grid[i].push(data[temp]);
 		temp += 1;
 	}
 }
@@ -289,3 +288,4 @@ for(i = 0; i < 4; i++) {
     faces[i] = s;
 }
 
+console.log(faces);
