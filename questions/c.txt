@@ -14,8 +14,8 @@ a.append('stderr')
 q.append('Which function returns a random number generator with a random value based on time?')
 a.append('randomize')
 
-q.append('In which header file is the NULL macro defined? ___.h)
-a.append('locale', 'stddef', 'stdio', 'stdlib', 'string', 'time', 'wchar')
+q.append('In which header file is the NULL macro defined? ___.h')
+a.append(['locale', 'stddef', 'stdio', 'stdlib', 'string', 'time', 'wchar'])
 
 #strings
 q.append('Which function sets first n characters of a string to a given character?')
@@ -38,12 +38,18 @@ q.append('What function should be used to free the memory allocated by calloc() 
 a.append('free')
 
 q.append('Which library functions to dynamically allocate memory?')
-a.append('malloc', 'calloc')
+a.append(['malloc', 'calloc'])
 
 #general
 q.append('One of the datatype that cannot be checked in a switch-case statement?')
-a.append('float', 'double')
+a.append(['float', 'double'])
 
 q.append('C fucntion that will you free the allocated memory ?')
 a.append('free')
 
+
+for i in range(0,len(q)):
+	if(type('str') == type(a[i])):
+		print {"question": q[i], "answers": [a[i]]}
+	else:
+		print {"question": q[i], "answers": a[i]}

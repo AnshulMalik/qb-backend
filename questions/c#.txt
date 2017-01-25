@@ -44,18 +44,8 @@ a.append('delegates')
 q.append('Which cannot be used to call procedures that receive variable number of arguments.')
 a.append('delegates')
 
-q.append('')
-a.append('')
-
-q.append('')
-a.append('')
-
-q.append('')
-a.append('')
-
-q.append('')
-a.append('')
-
-q.append('')
-a.append('')
-
+for i in range(0,len(q)):
+	if(type('str') == type(a[i])):
+		print {"question": q[i], "answer": [a[i]]}
+	else:
+		print {"question": q[i], "answer": a[i]}

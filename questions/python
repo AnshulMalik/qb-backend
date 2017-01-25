@@ -1,0 +1,35 @@
+{"question": 'What is the return type of function id ?', "answers": ['int']}
+{"question": 'In order to store values in terms of key and value we use what core datatype.', "answers": ['dictionary']}
+{"question": 'What is the return value of trunc() ?', "answers": ['int']}
+{"question": 'What is the type of sys.argv?', "answers": ['list']}
+{"question": 'Which module in the python standard library parses options received from the command line?', "answers": ['getopt']}
+{"question": 'Which keyword is use for function?', "answers": ['Def']}
+{"question": 'Which keyword does the same work as return keyword?', "answers": ['Yeild']}
+{"question": 'What is a coding convention, a set of recommendation, about how to write your Python code more readable?', "answers": ['PEP8']}
+{"question": 'What is the name of the python module that accepts a python object and converts it into a string representation and dumps it into a file by using dump function?', "answers": ['Pickle']}
+{"question": 'What are the tools that help to find bugs or perform static analysis?', "answers": ['Pychecker']}
+{"question": 'What are the specific changes that we make in Python syntax to alter functions easily called?', "answers": ['decorators']}
+{"question": 'Mutable datatype in python?', "answers": ['list']}
+{"question": 'Non-mutable datatype in python?', "answers": ['tuple']}
+{"question": 'What is the comprehension that is used to ease the creation of Dictionary based on existing iterable ?', "answers": ['Dict']}
+{"question": 'What is the comprehension that is used to ease the creation of List based on existing iterable?', "answers": ['List']}
+{"question": 'What is the single expression anonymous function often used as inline function?', "answers": ['lambda']}
+{"question": 'Which form in python does not have statements as it is used to make new function object and then return them at runtime?', "answers": ['lambda']}
+{"question": 'What is the no-operation statement in python?', "answers": ['pass']}
+{"question": 'What is the name of the unit testing framework in Python?', "answers": ['unittest']}
+{"question": 'What is the mechanism/function which helps to select a range of items from sequence types like list, tuple, strings etc.?', "answers": ['slicing']}
+{"question": 'The way of implementing iterators are called as _____?', "answers": ['generators']}
+{"question": 'Python documentation string is known as _______?', "answers": ['docstring']}
+{"question": '________ is the way to structure a program in python?', "answers": ['module']}
+{"question": 'The folder of Python program is a package of modules.  A __________ can have modules or subfolders.', "answers": ['package']}
+{"question": 'What happens on using `os.remove (filename)` command to the file?', "answers": ['delete']}
+{"question": 'What is the maximum value that the random function can generate?(round it off to an integer :P)', "answers": ['1']}
+{"question": 'What is the name of the module in python that contains the random function?', "answers": ['random']}
+{"question": '__________ is a web micro framework for Python based on "Werkzeug, Jinja 2 and good intentions" BSD licensed.', "answers": ['Flask']}
+{"question": '___________ and __________ are the dependencies if flask.', "answers": ['jingja', 'Werkzeug']}
+{"question": 'Flask allows to request database in three ways. Which function is called before the request?', "answers": ['before_request']}
+{"question": 'Flask allows to request database in three ways. Which function is called after a request?', "answers": ['after_request']}
+{"question": 'Flask allows to request database in three ways. Which function is called when exception is raised, and response are not guaranteed?', "answers": ['teardown_request']}
+{"question": 'What is the name of the effect which is referred to the event when cache expires, and websites are hit by the multiple requests made by the client at the same time?', "answers": ['Dogpile']}
+{"question": 'Which type of locks are used to prevent Dogpile effect?', "answers": ['semaphore']}
+{"question": '_________ is commonly misused to use it as a data store, and not as a cache', "answers": ['Memcached']}

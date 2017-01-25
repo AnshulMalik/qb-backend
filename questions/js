@@ -1,0 +1,37 @@
+{"questions": 'Inside which HTML element do we put the JavaScript? <%s>', "answers": ['script']}
+{"questions": 'What is a function defined inside another function (called the parent function), and has access to variables that are declared and defined in the parent function scope called?', "answers": ['closure']}
+{"questions": 'Which inbuilt functions can be used to empty an array in a single step/loop?', "answers": ['length', 'splice']}
+{"questions": 'What is the `$` used for?', "answers": ['jquery']}
+{"questions": '$(document)._____() method begins to run code as soon as the Document Object Model (DOM) is loaded. Fill the blank', "answers": ['ready']}
+{"questions": '________ JavaScript is basically a JavaScript methodology that seeks to overcome browser inconsistencies by separating page functionality from structure', "answers": ['Unobtrusive']}
+{"questions": 'What is used to represent not-a-number?', "answers": ['Nan']}
+{"questions": ' ______ JavaScript is also called client-side JavaScript.', "answers": ['Navigator']}
+{"questions": '__________ JavaScript is also called server-side JavaScript.', "answers": ['LiveWire']}
+{"questions": '<_____> tag is an extension to HTML that can enclose any number of JavaScript statements.(Fill in the blank)', "answers": ['script']}
+{"questions": 'JavaScript entities start with _______ and end with _________.', "answers": ['Ampersand', 'semicolon']}
+{"questions": ' ______method evaluates a string of JavaScript code in the context of the specified object.', "answers": ['Eval']}
+{"questions": 'JavaScript is interpreted by _________', "answers": ['Client']}
+{"questions": 'The _______ method of an Array object adds and/or removes elements from an array.', "answers": ['Splice']}
+{"questions": 'To enable data tainting, the end user sets the _________ environment variable.', "answers": ['NS_ENABLE_TAINT']}
+{"questions": 'Find one stateless protocol in the cube.', "answers": ['HTTP']}
+{"questions": 'How many WebSocket events are available?(in english)', "answers": ['four']}
+{"questions": 'Name all the websocket events in javascript.', "answers": ['open', 'close', 'message', 'error']}
+{"questions": 'Which attribute is used to specifies that the script is executed when the page has finished parsing (only for external scripts)?', "answers": ['defer']}
+{"questions": '______ attribute is used to specify the character encoding used in an external script file.', "answers": ['charset']}
+{"questions": 'What is the parameter of the method getElementsbyTagName() if we need to get an image?', "answers": ['img']}
+{"questions": 'Which is the function used to call a function in every time duration?', "answers": ['setInterval']}
+{"questions": 'Function to get the DOM object in JavaScript?', "answers": ['getElementbyId']}
+{"questions": "Which event handler is triggered when the user's mouse moves onto a link?", "answers": ['onMouseOver']}
+{"questions": "Which event handler is triggered when the user's mouse moves away from a link?", "answers": ['onMouseOut']}
+{"questions": 'Inbuilt function to find the index of a particular string?', "answers": ['indexOf']}
+{"questions": 'Which is the command that is used to spoof the client user agent?', "answers": ['setUserAgent']}
+{"questions": 'Which object is the main entry point to all client-side JavaScript features and APIs?', "answers": ['window']}
+{"questions": 'Which identifier is used to represent a web browser window or frame?', "answers": ['window']}
+{"questions": 'What is the alternative function used in Node for load()?', "answers": ['require']}
+{"questions": 'The necessary globals of a node are defined under which namespace?', "answers": ['process']}
+{"questions": 'The object that looks to the thread that creates it is', "answers": ['Worker']}
+{"questions": 'Name the function throught which you can send data using a Worker object?', "answers": ['postMessage']}
+{"questions": 'Which event is fired when a document and all of its external resources are fully loaded and displayed to the user?', "answers": ['load']}
+{"questions": 'Name an alternative to the load event?', "answers": ['readystatechange']}
+{"questions": 'Which event can be fired on any scrollable document element?', "answers": ['scroll']}
+{"questions": 'The return type of getElementsByClassName() is', "answers": ['NodeList']}

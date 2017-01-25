@@ -18,7 +18,7 @@ q.append('Example of an abstract data type escpecially used in C++')
 a.append('Class')
 
 q.append('Which type of polymorphism correctly describes overloading of functions?')
-a.append('Ad-hoc', 'Adhoc')
+a.append(['Ad-hoc', 'Adhoc'])
 
 q.append('Which concept means wrapping up of data and functions together?')
 a.append('Encapsulation')
@@ -116,6 +116,12 @@ a.append('protected')
 
 q.append('Which type of data member can be shared by all instances of its class?')
 a.append('static')
+
+for i in range(0,len(q)):
+	if(type('str') == type(a[i])):
+		print {"question": q[i], "answers": [a[i]]}
+	else:
+		print {"question": q[i], "answers": a[i]}
 
 
 

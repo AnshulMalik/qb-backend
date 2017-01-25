@@ -1,9 +1,6 @@
-Python
 
 q = []
 a = []
-language = ['Python']
-level = 1
 
 q.append('What is the return type of function id ?')
 a.append('int')
@@ -87,11 +84,11 @@ a.append('1')
 q.append('What is the name of the module in python that contains the random function?')
 a.append('random')
 
-q.append('__________ is a web micro framework for Python based on “Werkzeug, Jinja 2 and good intentions” BSD licensed.')
+q.append('__________ is a web micro framework for Python based on "Werkzeug, Jinja 2 and good intentions" BSD licensed.')
 a.append('Flask')
 
 q.append('___________ and __________ are the dependencies if flask.')
-a.append('jingja', 'Werkzeug ')
+a.append(['jingja', 'Werkzeug'])
 
 q.append('Flask allows to request database in three ways. Which function is called before the request?')
 a.append('before_request')
@@ -111,27 +108,8 @@ a.append('semaphore')
 q.append('_________ is commonly misused to use it as a data store, and not as a cache')
 a.append('Memcached')
 
-q.append('')
-a.append('')
-
-q.append('')
-a.append('')
-
-q.append('')
-a.append('')
-
-q.append('')
-a.append('')
-
-q.append('')
-a.append('')
-
-q.append('')
-a.append('')
-
-q.append('')
-a.append('')
-
-
 for i in range(0,len(q)):
-	{'Question': q[i], 'Answer': a[i]}
+	if(type('str') == type(a[i])):
+		print {"question": q[i], "answers": [a[i]]}
+	else:
+		print {"question": q[i], "answers": a[i]}

@@ -184,42 +184,8 @@ a.append('execl')
 q.append('Which of the following system calls does not return control to the calling point, on termination ?')
 a.append('exec')
 
-q.append('')
-a.append('')
-
-q.append('')
-a.append('')
-
-q.append('')
-a.append('')
-
-q.append('')
-a.append('')
-
-q.append('')
-a.append('')
-
-q.append('')
-a.append('')
-
-q.append('')
-a.append('')
-
-q.append('')
-a.append('')
-
-q.append('')
-a.append('')
-
-q.append('')
-a.append('')
-
-q.append('')
-a.append('')
-
-q.append('')
-a.append('')
-
-
-
-
+for i in range(0,len(q)):
+	if(type('str') == type(a[i])):
+		print {"question": q[i], "answers": [a[i]]}
+	else:
+		print {"question": q[i], "answers": a[i]}

@@ -1,0 +1,14 @@
+{"question": 'When we mention the prototype of a function?', "answers": ['Declaring']}
+{"question": 'Input/output function prototypes and macros are defined in which header file? ____.h', "answers": ['stdio']}
+{"question": 'Name of the inbuilt function that catches all the errors thrown by the program', "answers": ['stderr']}
+{"question": 'Which function returns a random number generator with a random value based on time?', "answers": ['randomize']}
+{"question": 'In which header file is the NULL macro defined? ___.h', "answers": ['locale', 'stddef', 'stdio', 'stdlib', 'string', 'time', 'wchar']}
+{"question": 'Which function sets first n characters of a string to a given character?', "answers": ['strnset']}
+{"question": 'The library function used to find the last occurrence of a character in a string is ___________ ', "answers": ['strrchr']}
+{"question": 'Which function is used to find the first occurrence of a given string in another string?', "answers": ['strstr']}
+{"question": 'Which function is more appropriate for reading in a multi-word string?', "answers": ['gets']}
+{"question": 'Which header file should be included to use functions like malloc() and calloc()?', "answers": ['stdlib']}
+{"question": 'What function should be used to free the memory allocated by calloc() ?', "answers": ['free']}
+{"question": 'Which library functions to dynamically allocate memory?', "answers": ['malloc', 'calloc']}
+{"question": 'One of the datatype that cannot be checked in a switch-case statement?', "answers": ['float', 'double']}
+{"question": 'C fucntion that will you free the allocated memory ?', "answers": ['free']}

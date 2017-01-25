@@ -1,8 +1,6 @@
-Python
 
 q = []
 a = []
-language = ['Javascript']
 
 q.append('Inside which HTML element do we put the JavaScript? <%s>')
 a.append('script')
@@ -73,10 +71,10 @@ a.append('setInterval')
 q.append('Function to get the DOM object in JavaScript?')
 a.append('getElementbyId')
 
-q.append('Which event handler is triggered when the user’s mouse moves onto a link?')
+q.append('Which event handler is triggered when the user\'s mouse moves onto a link?')
 a.append('onMouseOver')
 
-q.append('Which event handler is triggered when the user’s mouse moves away from a link?')
+q.append('Which event handler is triggered when the user\'s mouse moves away from a link?')
 a.append('onMouseOut')
 
 q.append('Inbuilt function to find the index of a particular string?')
@@ -115,67 +113,8 @@ a.append('scroll')
 q.append('The return type of getElementsByClassName() is')
 a.append('NodeList')
 
-q.append('')
-a.append('')
-
-q.append('')
-a.append('')
-
-q.append('')
-a.append('')
-
-q.append('')
-a.append('')
-
-q.append('')
-a.append('')
-
-q.append('')	
-a.append('')
-
-q.append('')
-a.append('')
-
-q.append('')
-a.append('')
-
-q.append('')
-a.append('')
-
-q.append('')
-a.append('')
-
-q.append('')
-a.append('')
-
-q.append('')
-a.append('')
-
-q.append('')
-a.append('')
-
-q.append('')
-a.append('')
-
-q.append('')
-a.append('')
-
-q.append('')
-a.append('')
-
-q.append('')
-a.append('')
-
-q.append('')
-a.append('')
-
-q.append('')
-a.append('')
-
-q.append('')
-a.append('')
-
-
-
 for i in range(0,len(q)):
-	{'Question': q[i], 'Answer': a[i]}
+	if(type('str') == type(a[i])):
+		print {"question": q[i], "answers": [a[i]]}
+	else:
+		print {"question": q[i], "answers": a[i]}
