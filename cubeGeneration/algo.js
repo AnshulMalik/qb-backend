@@ -1,11 +1,13 @@
+const crypto = require('crypto');
 var count;
 var positions;
 var positionsOfAllWords = [];
-var words = ['tammana', 'durga', 'venkata', 'rewanth'];
+var words;
 var counterArray = [];
 var checkSet;
 var MAX_SIZE = 5;
 var data;
+var startPositions = [];
 
 var getRandom = () => {
 	return String.fromCharCode(Math.floor(Math.random() * 26) + 65);
@@ -20,12 +22,6 @@ var getRandomDirection = () => {
 	return direction % 4;
 }
 
-var getRandomDirectionForTop = () => {
-	let direction = Math.floor(Math.random() * 3);
-	let arr = [0,2,3];
-	return arr[direction];
-}
-
 var check = (pos, next) => {
 
 	let size = MAX_SIZE*4;
@@ -37,7 +33,7 @@ var check = (pos, next) => {
 
 	if(next == 0) {
 		newPosition = pos + 1;
-		
+
 		// Checking the boundary values
 		for(let i = 1; i <= MAX_SIZE; i++) {
 			if(pos == (size*i - 1)) {
@@ -105,9 +101,9 @@ var check = (pos, next) => {
 				}
 			}
 		}
-		
+
 		//console.log(pos, next, data[newPosition]);
-		
+
 		if(data[newPosition] != "#") {
 			if(Array.from(checkSet).length == 4) {
 				return run();
@@ -117,7 +113,7 @@ var check = (pos, next) => {
 
 		return newPosition;
 	}
-	
+
 	if(next == 3) {
 		newPosition = pos + size;
 
@@ -136,7 +132,7 @@ var check = (pos, next) => {
 			}
 		}
 		//console.log(pos, next, data[newPosition]);
-		
+
 		if(data[newPosition] != "#") {
 			if(Array.from(checkSet).length == 4) {
 				return run();
@@ -150,8 +146,8 @@ var check = (pos, next) => {
 
 
 var box = (size) => {
-	
-	
+
+
 	let row = size*4;
 	let col = size;
 	count = row*col;
@@ -165,7 +161,7 @@ var box = (size) => {
 }
 
 var putName = (name) => {
-	
+
 	let pos = getRandomPosition(count);
 	//console.log(pos,count);
 	let newPosition = pos;
@@ -184,7 +180,7 @@ var putName = (name) => {
 			//console.log(err);
 			return 0;
 		}
-	
+
 	}
 }
 
@@ -214,27 +210,31 @@ var run = () => {
 	for(let i = 0; i < MAX_SIZE; i++) {
 		positionsOfAllWords.push([]);
 		counterArray.push(0);
+
 	}
-	
+
 	box(MAX_SIZE);
-	putName1(0);
-	putName1(1);
-	putName1(2);
-	putName1(3);
-	
+	for(let i = 0; i < words.length; i++) {
+		startPositions.push(0);
+	}
+
+	for(let i = 0; i < words.length; i++) {
+		allotName(i);
+		startPositions[i] = positions[0];
+	}
 }
 
-var putName1 = (functionId) => {
-	
+var allotName = (functionId) => {
+
 	let res;
-	res = 1; 
-	
+	res = 1;
+
 	res = putName(words[functionId]);
 	let range = numberOfFacesCovered();
 
 	if(res == 0 || range > 1) {
 		for(let i = 0; i < positions.length; i++) {
-			data[positions[i]].innerHTML = '#';
+			data[positions[i]] = '#';
 		}
 
 		if(counterArray[functionId] >= 5) {
@@ -243,49 +243,67 @@ var putName1 = (functionId) => {
 			}
 			else {
 				for(let i = 0; i < positionsOfAllWords[functionId].length; i++) {
-					data[positionsOfAllWords[functionId][i]].innerHTML = '#';
+					data[positionsOfAllWords[functionId][i]] = '#';
 				}
 				counterArray[functionId] = 0;
-				return putName1(functionId - 1);
+				return allotName(functionId - 1);
 			}
 		}
 
 		positionsOfAllWords[0] = positions;
 
 		counterArray[functionId] += 1;
-		return putName1(functionId);
+		return allotName(functionId);
 	}
 }
 
-run();
-let t = 0;
-for(let i = 0; i < MAX_SIZE; i++) {
-	let str = "";
-	for(let j = 0; j < MAX_SIZE*4; j++) {
-		str += data[t] + ' ';
-		t+=1;
+module.exports = (wordsToInsert) => {
+	console.log(wordsToInsert);
+	words = wordsToInsert;
+	run();
+
+	let t = 0;
+	for(let i = 0; i < MAX_SIZE; i++) {
+		let str = "";
+		for(let j = 0; j < MAX_SIZE*4; j++) {
+			str += data[t] + ' ';
+			t+=1;
+		}
+		console.log(str);
 	}
-	//console.log(str);
-}
 
-let temp = 0;
-let grid = [];
-for(let i = 0; i < MAX_SIZE; i++) {
-	grid.push([]);
-	for(let j = 0; j < MAX_SIZE*4; j++) {
-		grid[i].push(data[temp]);
-		temp += 1;
+	let temp = 0;
+	let grid = [];
+	for(let i = 0; i < MAX_SIZE; i++) {
+		grid.push([]);
+		for(let j = 0; j < MAX_SIZE*4; j++) {
+			grid[i].push(data[temp]);
+			temp += 1;
+		}
 	}
-}
 
-// Split the grid into faces
-let faces = [[], [], [], []];
-for(i = 0; i < 4; i++) {
-    let s = '';
-    for(j = 0; j < MAX_SIZE; j++) {
-        s += grid[j].splice(0, MAX_SIZE).join('');
-    }
-    faces[i] = s;
-}
+	// Split the grid into faces
+	let faces = [[], [], [], []];
+	for(i = 0; i < 4; i++) {
+		let s = '';
+		for(j = 0; j < MAX_SIZE; j++) {
+			s += grid[j].splice(0, MAX_SIZE).join('');
+		}
+		faces[i] = s;
+	}
+//	console.log(faces);
 
-console.log(faces);
+	let obj = {};
+	console.log(faces);
+	words.map((word, i) => {
+		obj[word] = {};
+		obj[word].start = [ startPositions[i] % (MAX_SIZE * 4), Math.floor(startPositions[i] / (MAX_SIZE * 4)) ];
+		let str = obj[word].start[0] + ',' + obj[word].start[1] + ',' + word;
+		obj[word].hash = crypto.createHash('md4').update(str).digest("hex");
+	});
+	
+	return {
+		words: obj,
+		grid: faces
+	};
+};
