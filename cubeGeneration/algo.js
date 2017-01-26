@@ -277,6 +277,8 @@ module.exports = (wordsToInsert) => {
 	for(let i = 0; i < MAX_SIZE; i++) {
 		grid.push([]);
 		for(let j = 0; j < MAX_SIZE*4; j++) {
+			if(data[temp] === '#')
+                data[temp] = String.fromCharCode(Math.floor(Math.random() * 26) + 65);
 			grid[i].push(data[temp]);
 			temp += 1;
 		}
@@ -301,7 +303,7 @@ module.exports = (wordsToInsert) => {
 		let str = obj[word].start[0] + ',' + obj[word].start[1] + ',' + word;
 		obj[word].hash = crypto.createHash('md4').update(str).digest("hex");
 	});
-	
+
 	return {
 		words: obj,
 		grid: faces
