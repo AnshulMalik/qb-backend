@@ -1,0 +1,25 @@
+Ever got bored with hefty work, collaborating with co-workers, associates, colleagues. Are you a flock user? Do you have a serious team working on an awesome project and need intellectual breaks between? Felt like playing some games? Challenging colleagues about their knowledge?
+Well here we come with a solution, a multiplayer game `qb`, the  cubical game for developers.
+
+Flock no doubt provides the best facilities for its developers to develop the best product but it lacks in providing them refreshment at the time of work. So we `goTeam` brings you  the first  ever multiplayer platform for flockOS.
+Every team needs refreshment while working over flock. Why don’t you make that an intellectual break? Increase your knowledge? Challenge co-worker? Play a multiplayer game ? So we are here to fill that space left out by the flock team providing refreshment for users.
+
+So beyond hackathon, we would like to develop this application for android and as a desktop application for windows and linux. 
+
+
+1. Backend
+
+Pull the repo.
+Install node
+Install node modules, npm install
+install mongodb
+Rename config-sample.json to config.json, and fill the required fields
+
+run node quesGenerateService.js
+and node app.js
+
+
+
+Also for front end, clone repo,
+use nginx to host
+browse dist folder and use.

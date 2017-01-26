@@ -1,8 +1,0 @@
-q=[]
-a=[]
-
-q.push('What is the name of the process that executes the command and leaves.')
-a.push('execl')
-
-q.push('Which of the following system calls does not return control to the calling point, on termination ?')
-a.push('exec')

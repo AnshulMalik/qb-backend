@@ -1,0 +1,13 @@
+{"answers": ['ngen'], "question": 'Which utility can be used to compile managed assemblies into processor-specific native code?'}
+{"answers": ['GarbageCollector'], "question": 'Which of the following .NET components can be used to remove unused references from the managed heap?(suppress the space)'}
+{"answers": ['Shared'], "question": 'Which type of assembly can be stored in Global Assembly Cache?'}
+{"answers": ['Managed'], "question": 'Which type of code that targets the Common Language Runtime?'}
+{"answers": ['Entrypoint'], "question": 'Name anything that CANNOT occur multiple number of times in a program?'}
+{"answers": ['Ten'], "question": 'int[ , , ] a = new int[ 3, 2, 3 ]; Console.WriteLine(a.Length); (Answer in english)'}
+{"answers": ['StackMemoryException'], "question": 'Which is type of exception is not present in .NET?'}
+{"answers": ['clr'], "question": 'In C#.NET if we do not catch the exception thrown at runtime then which of the following will catch it?'}
+{"answers": ['delegates'], "question": 'Who serves the same purpose as function pointers in C and pointers to member function operators in C++?'}
+{"answers": ['Class'], "question": 'Which declaration is the necessary condition for implementing delegates?'}
+{"answers": ['delegates'], "question": 'Which can be used to implement callback notification?'}
+{"answers": ['delegates'], "question": 'Who permits execution of a method on a secondary thread in an asynchronous manner. '}
+{"answers": ['delegates'], "question": 'Which cannot be used to call procedures that receive variable number of arguments.'}
